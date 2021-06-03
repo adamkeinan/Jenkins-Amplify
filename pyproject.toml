@@ -1,0 +1,35 @@
+[tool.autopep8]
+max_line_length = 120
+ignore = "E501,W6"# or ["E501", "W6"]
+
+[tool.black]
+line_length = 88 # if not using Blackd Then set to 79
+target_version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+/(
+    .git
+  | .hg
+  | .mypy_cache
+  | .tox
+  | ./Lib/*
+  | _build
+  | buck-out
+  | build
+  | .dist
+  | .history
+  | venv/
+  | cookie/
+  | doc/
+  | .github
+  | .idea
+  | .vscode
+  | share/
+  | tests/
+  | tmp/
+)
+/
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3

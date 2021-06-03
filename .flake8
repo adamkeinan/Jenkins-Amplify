@@ -1,0 +1,13 @@
+[flake8]
+max - returns = 2
+max - arguments = 4
+min - name - length = 2
+max - name - length = 30
+exclude = build,.git,./tests/,* .env,env.*,*/docs/*,*/.tox/*,/Lib/*,__pycache__,.history/,.tox,build,docs,bin,examples,flask_appbuilder/templates,flask_appbuilder/static,venv
+ignore = E203, E266, F401, F403, E501, W503, W504, W601
+extend-ignore = E203, E501
+max - line - length = 88
+length = 88
+max - complexity = 12
+select = B, C, E, F, W, T4, B9
+# allowed-domain-names

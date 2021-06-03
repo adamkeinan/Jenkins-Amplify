@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 3000,
+		"files.defaultLanguage": "Python",
+		"files.maxMemoryForLargeFilesMB": 12288,
+		"workbench.commandPalette.history": 40,
+		"workbench.commandPalette.preserveInput": true,
+		"workbench.list.smoothScrolling": true,
+		"workbench.colorTheme": "SynthWave '84",
+		"workbench.iconTheme": "material-icon-theme",
+		"workbench.preferredDarkColorTheme": "Cobalt2",
+		"workbench.editor.highlightModifiedTabs": true,
+		"workbench.editor.limit.enabled": true,
+		"workbench.editor.limit.perEditorGroup": true,
+		"workbench.settings.editor": "json",
+		"workbench.settings.openDefaultSettings": true,
+		"extensions.webWorker": true,
+		"terminal.integrated.copyOnSelection": true,
+		"terminal.integrated.cursorBlinking": true,
+		"terminal.integrated.cursorStyle": "line",
+		"terminal.integrated.fontSize": 15,
+		"terminal.integrated.gpuAcceleration": "on",
+		"terminal.integrated.scrollback": 1500,
+		"terminal.integrated.tabs.enabled": true,
+		"terminal.integrated.tabs.showActiveTerminal": "always",
+		"dotnetAcquisitionExtension.enableTelemetry": false,
+		"telemetry.enableCrashReporter": false,
+		"activitusbar.combineWorkspaceSettings": true,
+		"bashIde.highlightParsingErrors": true,
+		"cfnLint.enableAutocomplete": false,
+		"dictCompletion.addSpaceAfterCompletion": true,
+		"djangoCommands.historyMaxLength": 150,
+		"erlang.eep48Help": false,
+		"gitblame.commitUrl": "https://github.com/adamkeinan/Jenkins-Amplify",
+		"gitlens.advanced.commitOrdering": "date",
+		"indentRainbow.colorOnWhiteSpaceOnly": true,
+		"javascriptBooster.logLevel": "verbose",
+		"JSON-zain.json.autorefresh": true,
+		"kite.enableOptionalCompletionsTriggers": true,
+		"kite.codefinder.enableLineDecoration": true,
+		"vscode-mysql.enableTelemetry": false,
+		"oneDarkPro.italic": false,
+		"oneDarkPro.markdownStyle": false,
+		"php.suggest.basic": false,
+		"php.validate.enable": false
+	}
+}

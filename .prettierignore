@@ -1,0 +1,30 @@
+.vscode - test/
+out/**
+.dist
+test - fixtures/**
+**/venv/**
+**/node_modules/**
+config/
+polls/
+**/migrations/
+server/
+tmp/
+.git/**
+.github/
+users/
+_netrc
+.zshrc.swp
+.env
+.flake8
+.isort.cfg
+.gitignore
+.pylintrc
+.version
+procfile
+setup.cfg
+MANIFEST.ini
+tox.ini
+package - lock.json * .prettierignore
+README.md
+/*.py
+
