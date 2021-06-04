@@ -29,6 +29,10 @@ MANIFEST
 **/site-packages/**
 **/venv/**
 venv/
+coverage/
+.nyc_output/
+npm-debug.log
+.idea
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -135,3 +139,20 @@ dmypy.json
 .history/
 .dist/
 .vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+/.devcontainer/downloads
+/.devcontainer/qbittorrent
+
+# Nodejs
+node_modules
+/dist
+/coverage
+
+# local env files
+.env.local
+.env.*.local

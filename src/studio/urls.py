@@ -14,3 +14,4 @@ urlpatterns = [
     path('piplines/', views.piplines, name='Piplines'),
     path('plugins/', views.plugins, name='Plugins'),
 ]
+
