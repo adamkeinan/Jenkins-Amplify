@@ -21,10 +21,10 @@ module.exports = {
   },
 
   devServer: {
-    port: 8000,
-    proxy: {
-      '/api': {
-        target: 'http://qb.test:8080',
+    port: 8000,o,
+    proxy: {o,
+      '/api': {o,
+        target: 'http://studio.test:8080',
       },
     },
   },

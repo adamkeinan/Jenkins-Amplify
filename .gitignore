@@ -150,6 +150,8 @@ dmypy.json
 
 # Nodejs
 node_modules
+examples/
+**/examples/**
 /dist
 /coverage
 

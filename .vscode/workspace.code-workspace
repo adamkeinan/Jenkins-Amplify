@@ -48,6 +48,22 @@
 		"oneDarkPro.italic": false,
 		"oneDarkPro.markdownStyle": false,
 		"php.suggest.basic": false,
-		"php.validate.enable": false
+		"php.validate.enable": false,
+		"i18n-ally.localesPaths": [
+			"src/studio/locale",
+			"venv/Lib/site-packages/django/conf/locale",
+			"venv/Lib/site-packages/django/contrib/messages",
+			"venv/Lib/site-packages/django/contrib/admin/locale",
+			"venv/Lib/site-packages/django/contrib/admindocs/locale",
+			"venv/Lib/site-packages/django/contrib/contenttypes/locale",
+			"venv/Lib/site-packages/django/contrib/auth/locale",
+			"venv/Lib/site-packages/django/contrib/flatpages/locale",
+			"venv/Lib/site-packages/django/contrib/gis/locale",
+			"venv/Lib/site-packages/django/contrib/humanize/locale",
+			"venv/Lib/site-packages/django/contrib/postgres/locale",
+			"venv/Lib/site-packages/django/contrib/redirects/locale",
+			"venv/Lib/site-packages/django/contrib/sessions/locale",
+			"venv/Lib/site-packages/django/contrib/sites/locale"
+		]
 	}
 }

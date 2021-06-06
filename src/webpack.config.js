@@ -13,12 +13,13 @@ const babelConfig = {
             {
                 targets: {
                     browsers: [
-                        'last 2 versions',
-                        'Firefox ESR',
-                        '> 1%',
-                        'ie = 10',
-                        'iOS >= 8',
-                        'Android >= 4',
+                    'last 2 versions',
+                      'Firefox ESR',
+                      '> 1%',
+                      'Chrome >= 82',
+                      'ie = 10',
+                      'iOS >= 8',
+                      'Android >= 4',
                     ],
                 },
             },
@@ -33,8 +34,7 @@ const babelConfig = {
                 style: true,
             },
         ],
-        [
-            '@vue/babel-plugin-jsx', { mergeProps: false, enableObjectSlots: false }],
+        ['@vue/babel-plugin-jsx', { mergeProps: false, enableObjectSlots: false }],
         '@babel/plugin-proposal-optional-chaining',
         '@babel/plugin-transform-object-assign',
         '@babel/plugin-proposal-object-rest-spread',
@@ -47,90 +47,91 @@ const babelConfig = {
 /** @type {import('webpack').Configuration} */
 
 module.exports = {
-    mode: 'development',
-    entry: {
-        app: './examples/index.js',
-    },
-    stats: {
-        warningsFilter: /export .* was not found in/,
-    },
-    module: {
-        rules: [
-            {
-                test: /\.md$/,
-                loader: 'raw-loader',
+  mode: 'development',
+  entry: {
+    app: './studio/App.vue',
+  },
+  stats: {
+    warningsFilter: /export .* was not found in/,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.md$/,
+        loader: 'raw-loader',
+      },
+      {
+        test: /\.(vue)$/,
+        loader: 'vue-loader',
+      },
+      {
+        test: /\.s(c|a)ss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            // Requires sass-loader@^7.0.0
+            options: {
+              implementation: require('sass'),
+              indentedSyntax: true // optional
             },
-            {
-                test: /\.(vue)$/,
-                loader: 'vue-loader',
+            // Requires >= sass-loader@^8.0.0
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                indentedSyntax: true // optional
+              },
             },
-            {
-                test: /\.s(c|a)ss$/,
-                use: [
-                    'vue-style-loader',
-                    'css-loader',
-                    {
-                        loader: 'sass-loader',
-                        // Requires sass-loader@^7.0.0
-                        options: {
-                            implementation: require('sass'),
-                            indentedSyntax: true // optional
-                        },
-                        // Requires >= sass-loader@^8.0.0
-                        options: {
-                            implementation: require('sass'),
-                            sassOptions: {
-                                indentedSyntax: true // optional
-                            },
-                        },
-                        test: /\.(js|jsx)$/,
-                        loader: 'babel-loader',
-                        exclude: /pickr.*js/,
-                        options: babelConfig,
-                    },
-                    {
-                        test: /\.(png|jpg|gif|svg)$/,
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]?[hash]',
-                        },
-                    },
-                    {
-                        test: /\.css$/,
-                        use: [
-                            {
-                                loader: MiniCssExtractPlugin.loader,
-                                options: {},
-                            },
-                            'css-loader',
-                        ],
-                    },
-                
-                ],
+            test: /\.(js|jsx)$/,
+            loader: 'babel-loader',
+            exclude: /pickr.*js/,
+            options: babelConfig,
+          },
+          {
+            test: /\.(png|jpg|gif|svg)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]?[hash]',
             },
+          },
+          {
+            test: /\.css$/,
+            use: [
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {},
+              },
+              'css-loader',
+            ],
+          },
+
         ],
-        exclude: /node_modules/,
-    },
-},
-    devServer: {
+      },
+    ],
+    exclude: /node_modules/,
+  },
+  devServer: {
     historyApiFallback: {
-        rewrites: [{ from: /./, to: '/index.html' }],
+      rewrites: [{ from: /./, to: '/index.html' }],
     },
     disableHostCheck: true,
-        hot: true,
-            open: true,
+    hot: true,
+    open: true,
   },
-devtool: 'inline-cheap-module-source-map',
+  devtool: {
+    'inline-cheap-module-source-map',
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-        }),
-        new HtmlWebpackPlugin({
-            template: 'examples/index.html',
-            filename: 'index.html',
-            inject: true,
-        }),
-        new VueLoaderPlugin(),
-        new WebpackBar(),
-    ],
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+      }),
+      new HtmlWebpackPlugin({
+        template: 'examples/index.html',
+        filename: 'index.html',
+        inject: true,
+      }),
+      new VueLoaderPlugin(),
+      new WebpackBar(),
+    ]
+  }
 };
