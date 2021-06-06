@@ -144,9 +144,20 @@ dmypy.json
 *.njsproj
 *.sln
 *.sw?
+/dist
+package-lock.json
+
 
 /.devcontainer/downloads
 /.devcontainer/qbittorrent
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+*.log
 
 # Nodejs
 node_modules

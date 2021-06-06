@@ -1,17 +1,32 @@
 // src/studio/main.js
-
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './registerServiceWorker'
+import './plugins/base'
+import './plugins/chartist'
+import './plugins/vee-validate'
+// Components
+import './components'
+// Plugins
+import './plugins'
 
 import App from './App.vue'
+
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import { createI18n } from './plugins/vuetify/i18n.ts'
-import { createRouter } from './router.ts'
-import { createVuetify } from '@/vuetify'
-import { registerPlugins } from './plugins'
+// Sync router with store
 import { sync } from 'vuex-router-sync'
-import vuetify from '@/plugins/vuetify'
+
+// Application imports
+import App from './App'
+import i18n from '@/i18n'
+import router from '@/router'
+import store from '@/store'
+import Vuetify from 'vuetify'
+import vuetify from './plugins/vuetify';
+
+Vue.config.productionTip = false
 
 const app = new Vue({
     router,
@@ -29,4 +44,10 @@ await start(entry)
 
 return entry
 
-new Vue({ vuetify }).$mount('#app')
+new Vue({
+  router,
+  store,
+  vuetify,
+  i18n,
+  render: h => h(App),
+}).$mount('#app')
